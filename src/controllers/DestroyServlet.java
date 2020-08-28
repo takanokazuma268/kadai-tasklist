@@ -37,7 +37,7 @@ public class DestroyServlet extends HttpServlet {
 
                     // セッションスコープからメッセージのIDを取得して
                     // 該当のIDのメッセージ1件のみをデータベースから取得
-                    Task m = em.find(Task.class, (Integer)(request.getSession().getAttribute("message_id")));
+                    Task m = em.find(Task.class, (Integer)(request.getSession().getAttribute("task_id")));
 
                     em.getTransaction().begin();
                     em.remove(m);       // データ削除
